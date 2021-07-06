@@ -1,0 +1,6 @@
+name: SinaleiraPL
+version: 1.0.9
+main: events.Main
+commands:
+  sinaleira:
+    description: Utilize /sinaleira help para ver os comandos

@@ -1,0 +1,67 @@
+  Iniciando:
+  - ' '
+  - '&2[Sinaleira] &aEvento iniciando!'
+  - '&2[Sinaleira] &aPara participar digite: &2/sinaleira entrar'
+  - '&2[Sinaleira] &aTotal de participantes: &2@players'
+  - '&2[Sinaleira] &aVocê tem &2@tempo &asegundos para entrar.'
+  - ' '
+  Instrucoes:
+  - ' '
+  - '&6[Sinaleira] &eInstruções:'
+  - '&6[Sinaleira] &eCorra quando o sinal estiver &averde&e!'
+  - '&6[Sinaleira] &ePare quando o sinal estiver &cvermelho&e!'
+  - '&6[Sinaleira] &eQuem andar no sinal &cvermelho&e perde!'
+  - '&6[Sinaleira] &eO primeiro a alcançar a &fchegada &evence!'
+  - '&6[Sinaleira] &eEvento iniciando em &f@tempo segundos&e!'
+  - '&6[Sinaleira] &eBoa sorte a todos!'
+  - ' '
+  Cancelado:
+  - ' '
+  - '&4[Sinaleira] &cEvento cancelado, nenhum participante.'
+  - ' '
+  EventoFechado:
+  - ' '
+  - '&2[Sinaleira] &aEvento fechado.'
+  - ' '
+  Vermelho:
+  - '&4[Sinaleira] &cSinal vermelho!'
+  Parado:
+  - '&4[Sinaleira] &cFique parado por mais &f@tempo&c!'
+  Amarelo:
+  - '&6[Sinaleira] &eSinal amarelo!'
+  Verde:
+  - '&2[Sinaleira] &aSinal verde!'
+  Correndo:
+  - '&2[Sinaleira] &aVocê tem &f@tempo &asegundos para correr!'
+  EventoEncerrado:
+  - '&2[Sinaleira] &aEvento encerrado.'
+  - '&2[Sinaleira] &aGanhador: &f@ganhador'
+  Help:
+  - '&2=========='
+  - '&2[Sinaleira]'
+  - '&a/sinaleira entrar'
+  - '&a/sinaleira sair'
+  - '&a/sinaleira camarote'
+  - '&a/sinaleira admin'
+  - '&a/sinaleira credits'
+  - '&2[Sinaleira]'
+  - '&2=========='
+  Admin:
+  - '&2===='
+  - '&2[Sinaleira]'
+  - '&a/sinaleira set block [id] - Setar id do bloco abaixo da chegada.'
+  - '&a/sinaleira set camarote - Setar local do camarote.'
+  - '&a/sinaleira set inicio - Setar local de inicio do evento.'
+  - '&a/sinaleira set spawn - Setar o local para teleportar os player após término do evento.'
+  - '&a/sinaleira sinal - Setar o bloco usado como sinaleira.'
+  - '&a/sinaleira reset sinal - Reseta todos os blocos usados como sinaleira.'
+  - '&a/sinaleira setpremio [id] [quantidade] - Setar premio.'
+  - '&aPlugin by vini :d'
+  - '&2[Sinaleira]'
+  - '&2===='
+  TempoParaEntrar: 10
+  TempoParado: 5
+  TempoCorrendo: 10
+  TempoInstrucoes: 10
+
+  
