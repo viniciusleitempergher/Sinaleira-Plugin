@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -13,7 +14,7 @@ public class SinaleiraMsg {
 	public static double tempoInicial = Integer.parseInt(Main.cf.getString("TempoParaEntrar"));
 	public static boolean podeCorrer = true;
 	public static Map<Integer, Player> participantesI = new HashMap<>();
-
+	
 	public static void sinalStart() throws InterruptedException {
 		Comandos.ocurr = true;
 		for (double tempo = tempoInicial; tempo > 0.0D; tempo -= tempoInicial * 0.25D) {
@@ -22,11 +23,10 @@ public class SinaleiraMsg {
 
 			for (int i = 0; i < mensagem.size(); i++) {
 				String s = mensagem.get(i);
-				s = s.replace('&', '§');
 				s = s.replaceAll("@tempo", (new StringBuilder(String.valueOf(tempo))).toString());
 				s = s.replaceAll("@players",
 						(new StringBuilder(String.valueOf(Comandos.participantes.size()))).toString());
-				Bukkit.broadcastMessage(s);
+				Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 
 			Thread.sleep((long) (tempoInicial * 0.25D * 1000.0D));
@@ -110,10 +110,9 @@ public class SinaleiraMsg {
 			int k;
 			for (k = 0; k < msg.size(); k++) {
 				String s = msg.get(k);
-				s = s.replace('&', '§');
 				s = s.replaceAll("@tempo", (new StringBuilder(String.valueOf(tempo))).toString());
 				for (int w = 1; w <= Comandos.participantes.size(); w++) {
-					((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(s);
+					((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 				}
 			}
 			if (tempo <= 3.0D) {
@@ -121,9 +120,8 @@ public class SinaleiraMsg {
 				msg = Main.cf.getStringList("Amarelo");
 				for (k = 0; k < msg.size(); k++) {
 					String s = msg.get(k);
-					s = s.replace('&', '§');
 					for (int w = 1; w <= Comandos.participantes.size(); w++) {
-						((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(s);
+						((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 					}
 				}
 				for (int m = 0; m < Comandos.blocosSinal.size(); m++) {
@@ -145,9 +143,8 @@ public class SinaleiraMsg {
 		mensagem = Main.cf.getStringList("Vermelho");
 		for (int f = 0; f < mensagem.size(); f++) {
 			String s = mensagem.get(f);
-			s = s.replace('&', '§');
 			for (int w = 1; w <= Comandos.participantes.size(); w++) {
-				((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(s);
+				((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 		}
 		podeCorrer = false;
@@ -163,10 +160,9 @@ public class SinaleiraMsg {
 			mensagem = Main.cf.getStringList("Parado");
 			for (int j = 0; j < mensagem.size(); j++) {
 				String s = mensagem.get(j);
-				s = s.replace('&', '§');
 				s = s.replaceAll("@tempo", (new StringBuilder(String.valueOf(tempo))).toString());
 				for (int w = 1; w <= Comandos.participantes.size(); w++) {
-					((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(s);
+					((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 				}
 			}
 			Thread.sleep((long) (tempoParado * 0.25D * 1000.0D));

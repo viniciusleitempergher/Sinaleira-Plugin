@@ -55,7 +55,7 @@ public class Eventos implements Listener {
 			return;
 		}
 		if (!SinaleiraMsg.podeCorrer && participantes.containsValue(player)) {
-			player.sendMessage("§4[FG]§c Você perdeu ;c");
+			player.sendMessage("§4[Sinaleira]§c Você perdeu ;c");
 			Comandos.numPar--;
 			participantes.remove(getKey(participantes, player));
 			player.setCanPickupItems(true);

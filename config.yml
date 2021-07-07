@@ -37,18 +37,15 @@
   - '&2[Sinaleira] &aEvento encerrado.'
   - '&2[Sinaleira] &aGanhador: &f@ganhador'
   Help:
-  - '&2=========='
-  - '&2[Sinaleira]'
+  - '&2=====[Sinaleira]====='
   - '&a/sinaleira entrar'
   - '&a/sinaleira sair'
   - '&a/sinaleira camarote'
   - '&a/sinaleira admin'
   - '&a/sinaleira credits'
-  - '&2[Sinaleira]'
-  - '&2=========='
+  - '&2=====[Sinaleira]====='
   Admin:
-  - '&2===='
-  - '&2[Sinaleira]'
+  - '&2=====[Sinaleira]====='
   - '&a/sinaleira set block [id] - Setar id do bloco abaixo da chegada.'
   - '&a/sinaleira set camarote - Setar local do camarote.'
   - '&a/sinaleira set inicio - Setar local de inicio do evento.'
@@ -57,8 +54,7 @@
   - '&a/sinaleira reset sinal - Reseta todos os blocos usados como sinaleira.'
   - '&a/sinaleira setpremio [id] [quantidade] - Setar premio.'
   - '&aPlugin by vini :d'
-  - '&2[Sinaleira]'
-  - '&2===='
+  - '&2=====[Sinaleira]====='
   TempoParaEntrar: 10
   TempoParado: 5
   TempoCorrendo: 10

@@ -108,7 +108,7 @@ public class Comandos implements CommandExecutor, Listener {
 			}
 
 			if (!p.hasPermission("sinaleira.set")) {
-				p.sendMessage("§4Sem permissão.");
+				p.sendMessage("§4[Sinaleira]§c Comando não existe, /sinaleira help para ajuda sobre comandos.");
 				return true;
 			}
 			if (args[0].equalsIgnoreCase("admin")) {
@@ -153,7 +153,7 @@ public class Comandos implements CommandExecutor, Listener {
 				}
 				if (args[1].equalsIgnoreCase("camarote")) {
 					camarote = p.getLocation();
-					p.sendMessage("§2[FG] §aLocal de camarote setado!");
+					p.sendMessage("§2[Sinaleira] §aLocal de camarote setado!");
 
 					Main.configs.getConfig().set("camarote.world", camarote.getWorld().getName());
 					Main.configs.getConfig().set("camarote.x", Double.valueOf(camarote.getX()));
@@ -165,7 +165,7 @@ public class Comandos implements CommandExecutor, Listener {
 				if (args[1].equalsIgnoreCase("inicio")) {
 					inicio = p.getLocation();
 
-					p.sendMessage("§2[FG] §aLocal de inicio setado!");
+					p.sendMessage("§2[Sinaleira] §aLocal de inicio setado!");
 
 					Main.configs.getConfig().set("inicio.world", inicio.getWorld().getName());
 					Main.configs.getConfig().set("inicio.x", Double.valueOf(inicio.getX()));
@@ -177,7 +177,7 @@ public class Comandos implements CommandExecutor, Listener {
 				if (args[1].equalsIgnoreCase("spawn")) {
 					spawn = p.getLocation();
 
-					p.sendMessage("§2[FG] §aLocal de spawn do server setado!");
+					p.sendMessage("§2[Sinaleira] §aLocal de spawn do server setado!");
 
 					Main.configs.getConfig().set("spawndoserver.world", spawn.getWorld().getName());
 					Main.configs.getConfig().set("spawndoserver.x", Double.valueOf(spawn.getX()));
@@ -251,15 +251,15 @@ public class Comandos implements CommandExecutor, Listener {
 				Eventos.premio = Main.cf.getItemStack("Premio");
 
 				if (camarote == null) {
-					p.sendMessage("§4[FG] §cNão foi possível iniciar sinaleira, camarote não setado.");
+					p.sendMessage("§4[Sinaleira] §cNão foi possível iniciar sinaleira, camarote não setado.");
 					return true;
 				}
 				if (inicio == null) {
-					p.sendMessage("§4[FG] §cNão foi possível iniciar sinaleira, inicio não setado.");
+					p.sendMessage("§4[Sinaleira] §cNão foi possível iniciar sinaleira, inicio não setado.");
 					return true;
 				}
 				if (itID == null) {
-					p.sendMessage("§4[FG] §cNão foi possível iniciar sinaleira, bloco de chegada não setado.");
+					p.sendMessage("§4[Sinaleira] §cNão foi possível iniciar sinaleira, bloco de chegada não setado.");
 					return true;
 				}
 				ocurr = true;
