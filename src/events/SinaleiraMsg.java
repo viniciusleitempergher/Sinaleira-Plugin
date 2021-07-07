@@ -43,8 +43,7 @@ public class SinaleiraMsg {
 			mensagem = Main.cf.getStringList("Cancelado");
 			for (int f = 0; f < mensagem.size(); f++) {
 				String s = mensagem.get(f);
-				s = s.replace('&', '§');
-				Bukkit.broadcastMessage(s);
+				Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 			return;
 		}
@@ -55,9 +54,8 @@ public class SinaleiraMsg {
 			int f;
 			for (f = 0; f < msg.size(); f++) {
 				String s = msg.get(f);
-				s = s.replace('&', '§');
 				s = s.replaceAll("@tempo", (new StringBuilder(String.valueOf(instructions))).toString());
-				p.sendMessage(s);
+				p.sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 
 			msg = Main.cf.getStringList("EventoFechado");
@@ -65,8 +63,7 @@ public class SinaleiraMsg {
 
 			for (f = 0; f < msg.size(); f++) {
 				String s = msg.get(f);
-				s = s.replace('&', '§');
-				Bukkit.broadcastMessage(s);
+				Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 		}
 		Thread.sleep((long) (instructions * 1000.0D));
@@ -91,9 +88,8 @@ public class SinaleiraMsg {
 		msg = Main.cf.getStringList("Verde");
 		for (int f = 0; f < msg.size(); f++) {
 			String s = msg.get(f);
-			s = s.replace('&', '§');
 			for (int w = 1; w <= Comandos.participantes.size(); w++) {
-				((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(s);
+				((Player) Comandos.participantes.get(Integer.valueOf(w))).sendMessage(ChatColor.translateAlternateColorCodes('&', s));
 			}
 		}
 
